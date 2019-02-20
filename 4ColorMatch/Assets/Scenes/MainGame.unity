@@ -108,6 +108,25 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &170740755 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1950964920028754, guid: 85c7a2d136077574f9ed56998b6a68b1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1239412643}
+--- !u!114 &170740756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170740755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96fbe508fc2de34bba140ff88723782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalRotationZ: 0
+  currentRotation: {x: 0, y: 0, z: 0}
+  speed: 100
 --- !u!1 &467596123
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,11 +253,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4224762716603584, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1950964920028754, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
       propertyPath: m_Name
-      value: Rectangle (1)
+      value: Rectangle3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614915549340140, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090714975706550, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686723319665030, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147598987403782, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686723319665030, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090714975706550, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614915549340140, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147598987403782, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Green
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
@@ -280,11 +331,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4224762716603584, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1950964920028754, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
       propertyPath: m_Name
-      value: Rectangle (2)
+      value: Rectangle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090714975706550, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614915549340140, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686723319665030, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147598987403782, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686723319665030, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090714975706550, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614915549340140, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147598987403782, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Green
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
@@ -326,7 +409,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4224762716603584, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950964920028754, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Name
+      value: Rectangle2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147598987403782, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090714975706550, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614915549340140, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686723319665030, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686723319665030, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090714975706550, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614915549340140, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147598987403782, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
+      propertyPath: m_TagString
+      value: Green
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85c7a2d136077574f9ed56998b6a68b1, type: 2}
