@@ -19,11 +19,14 @@ public class Ball : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		
 		if (col.gameObject.tag == this.gameObject.tag) {
+			GameObject.Find ("GameManager").GetComponent<ScoreAndUI> ().IncreaseScore ();
 			Destroy (this.gameObject);
 
 		} else {
 			//GameOver
 			Debug.Log("GameOver");
+			GameObject.Find ("GameManager").GetComponent<ScoreAndUI> ().GameOver ();
+			speed = 0;
 
 		}
 	}
