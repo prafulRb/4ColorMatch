@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4974766503460264}
   - component: {fileID: 212417541075497530}
   - component: {fileID: 58333034314557296}
+  - component: {fileID: 114748484876390918}
   m_Layer: 0
   m_Name: YellowBall
   m_TagString: Untagged
@@ -56,6 +57,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114748484876390918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159662112435106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22028ca5256c3724fbcc5bb9696c3669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  dir: -1
 --- !u!212 &212417541075497530
 SpriteRenderer:
   m_ObjectHideFlags: 1

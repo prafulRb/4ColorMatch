@@ -195,8 +195,8 @@ MonoBehaviour:
   - {fileID: 541131940}
   - {fileID: 5567032}
   - {fileID: 366179512}
-  spawnTime: 1.5
-  minSpawnTime: 0.5
+  spawnTime: 3
+  minSpawnTime: 1.25
 --- !u!4 &278381737
 Transform:
   m_ObjectHideFlags: 0
