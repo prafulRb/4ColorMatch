@@ -10,7 +10,7 @@ public class ScoreAndUI : MonoBehaviour {
 	public GameObject GameOverPanel;
 	// Use this for initialization
 	void Start () {
-		
+		Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame
@@ -25,6 +25,7 @@ public class ScoreAndUI : MonoBehaviour {
 
 	public void GameOver(){
 		GameOverPanel.SetActive (true);
+		Time.timeScale = 0;
 	}
 
 	public void PlayAgain(){
