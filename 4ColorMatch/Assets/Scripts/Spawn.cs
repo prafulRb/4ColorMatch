@@ -14,6 +14,7 @@ public class Spawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//Spawn ball at certain interval
 		if ((Time.time - newTime) > spawnTime) {
 			Instantiate (ballObj [Random.Range(0, ballObj.Length)], spawnPos [Random.Range(0, spawnPos.Length)].position, Quaternion.identity);
 			if (spawnTime > minSpawnTime) {

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-	public float[] finalRotationZ;
+	public float[] finalRotationZ;  //the objects needs to rotate until its angle reaches finalRotationZ
 	public Vector3[] currentRotation;
-	public float speed;
+	public float speed; //speed at which the object rotates
 	int objNum;
-	public GameObject[] RectangleObj;
+	public GameObject[] RectangleObj; // All of the three rectangle objects
 	// Use this for initialization
 	void Start () {
 		finalRotationZ = new float[3];
@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour {
 
 	}
 
-
+	//Animate the rotation of the object 
 	IEnumerator RotateObject(int num){
 		yield return new WaitForSeconds (0);
 		currentRotation[num] += new Vector3(0,0,speed*Time.deltaTime);
