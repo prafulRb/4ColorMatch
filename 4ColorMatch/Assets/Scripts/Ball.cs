@@ -25,6 +25,7 @@ public class Ball : MonoBehaviour {
 		} else {
 			//GameOver
 			Debug.Log("GameOver");
+			Camera.main.GetComponent<Animator> ().SetTrigger ("shake");
 			GameObject.Find ("GameManager").GetComponent<ScoreAndUI> ().GameOver ();
 			speed = 0;
 
