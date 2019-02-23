@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour {
 	public float speed;
 	public float dir;
-
+	public float acceleration;
 	// Use this for initialization
 	void Start () {
 
@@ -13,6 +13,7 @@ public class Ball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		speed += acceleration * Time.deltaTime;
 		transform.position += new Vector3 (0, speed * dir*Time.deltaTime, 0);
 	}
 
