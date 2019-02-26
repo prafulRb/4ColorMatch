@@ -10,8 +10,16 @@ public class ScoreAndUI : MonoBehaviour {
 	public Text scoreText;
     public Text highScoreText;
 	public GameObject GameOverPanel;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    private void Awake()
+    {
+            //Set screen size for Standalone
+        #if UNITY_STANDALONE
+                Screen.SetResolution(376, 640, false);
+                Screen.fullScreen = false;
+        #endif
+    }
+    void Start () {
 		Time.timeScale = 1;
         highScore = PlayerPrefs.GetInt("HighScore");
 
