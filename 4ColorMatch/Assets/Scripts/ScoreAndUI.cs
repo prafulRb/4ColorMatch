@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class ScoreAndUI : MonoBehaviour {
 	public int scoreNum;
+    int highScore;
 	public Text scoreText;
+    public Text highScoreText;
 	public GameObject GameOverPanel;
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 1;
-	}
+        highScore = PlayerPrefs.GetInt("HighScore");
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,6 +28,11 @@ public class ScoreAndUI : MonoBehaviour {
 	}
 
 	public void GameOver(){
+        if (scoreNum > highScore) {
+            highScore = scoreNum;
+            PlayerPrefs.SetInt("HighScore", highScore);
+        }
+        highScoreText.text = "HighScore: " + highScore.ToString();
 		GameOverPanel.SetActive (true);
 		Time.timeScale = 0;
 	}
