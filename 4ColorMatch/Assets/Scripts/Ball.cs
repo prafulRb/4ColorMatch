@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		
+		//If color ball lands on the same color then increase score else its gameover
 		if (col.gameObject.tag == this.gameObject.tag) {
 			GameObject.Find ("GameManager").GetComponent<ScoreAndUI> ().IncreaseScore ();
             GameObject.Find("SoundEffect").GetComponent<Sound>().PlayEatSound();

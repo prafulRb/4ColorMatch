@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0)) {
 			
 			RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
+            //if the raycast hit the colored triangle then rotate its parent rectangle by 90 degree
 			if (hit.collider != null) {
 				if(hit.collider.tag == "Red" || hit.collider.tag == "Green" || hit.collider.tag == "Blue" || hit.collider.tag == "Yellow"){
 
