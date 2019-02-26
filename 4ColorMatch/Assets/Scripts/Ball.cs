@@ -21,6 +21,7 @@ public class Ball : MonoBehaviour {
 		
 		if (col.gameObject.tag == this.gameObject.tag) {
 			GameObject.Find ("GameManager").GetComponent<ScoreAndUI> ().IncreaseScore ();
+            GameObject.Find("SoundEffect").GetComponent<Sound>().PlayEatSound();
 			Destroy (this.gameObject);
 
 		} else {
@@ -28,7 +29,9 @@ public class Ball : MonoBehaviour {
 			Debug.Log("GameOver");
 			Camera.main.GetComponent<Animator> ().SetTrigger ("shake");
 			GameObject.Find ("GameManager").GetComponent<ScoreAndUI> ().GameOver ();
-			speed = 0;
+            GameObject.Find("SoundEffect").GetComponent<Sound>().PlayDieSound();
+
+            speed = 0;
 
 		}
 	}
