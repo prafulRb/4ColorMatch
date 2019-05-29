@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameOverAndScore : MonoBehaviour {
+	[SerializeField]GameObject scoreParticle;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,8 @@ public class GameOverAndScore : MonoBehaviour {
 		if (col.gameObject.tag == this.gameObject.tag) {
 			GameObject.Find ("GameManager").GetComponent<ScoreAndUI> ().IncreaseScore ();
 			GameObject.Find("SoundEffect").GetComponent<Sound>().PlayEatSound();
+			Vector3 particlePos = transform.GetChild (0).transform.position;
+			Instantiate (scoreParticle, particlePos, Quaternion.identity);
 			Destroy (this.gameObject);
 
 		} else {
