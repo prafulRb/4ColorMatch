@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sound : MonoBehaviour {
-    public AudioClip eatSound;
-    public AudioClip dieSound;
+	[SerializeField]AudioClip eatSound;
+	[SerializeField]AudioClip dieSound;
     AudioSource soundSource;
     // Use this for initialization
     void Start () {

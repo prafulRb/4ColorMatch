@@ -5,11 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ScoreAndUI : MonoBehaviour {
-	public int scoreNum;
+	[SerializeField]int scoreNum;
     int highScore;
-	public Text scoreText;
-    public Text highScoreText;
-	public GameObject GameOverPanel;
+	[SerializeField]Text scoreText;
+	[SerializeField]Text highScoreText;
+	[SerializeField]GameObject GameOverPanel;
     // Use this for initialization
     private void Awake()
     {

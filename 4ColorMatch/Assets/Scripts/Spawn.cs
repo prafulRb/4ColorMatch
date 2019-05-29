@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawn : MonoBehaviour {
-	public GameObject[] ballObj;
-	public Transform[] spawnPos;
+	[SerializeField]GameObject[] ballObj;
+	[SerializeField]Transform[] spawnPos;
 	float newTime;
-	public float spawnTime;
-	public float minSpawnTime;
+	[SerializeField]float spawnTime;
+	[SerializeField]float minSpawnTime;
 	// Use this for initialization
 	void Start () {
 	}

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour {
-	public float speed;
-	public float dir;
-	public float acceleration;
+	[SerializeField]float speed;
+	[SerializeField]float dir;
+	[SerializeField]float acceleration;
 	// Use this for initialization
 	void Start () {
 

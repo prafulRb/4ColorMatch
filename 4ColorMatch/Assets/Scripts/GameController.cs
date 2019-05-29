@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-	public float[] finalRotationZ;  //the objects needs to rotate until its angle reaches finalRotationZ
-	public Vector3[] currentRotation;
-	public float speed; //speed at which the object rotates
+	[SerializeField]float[] finalRotationZ;  //the objects needs to rotate until its angle reaches finalRotationZ
+	[SerializeField]Vector3[] currentRotation;
+	[SerializeField]float speed; //speed at which the object rotates
 	int objNum;
-	public GameObject[] RectangleObj; // All of the three rectangle objects
+	[SerializeField]GameObject[] RectangleObj; // All of the three rectangle objects
 	// Use this for initialization
 	void Start () {
 		finalRotationZ = new float[3];
