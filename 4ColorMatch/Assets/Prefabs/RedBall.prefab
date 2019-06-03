@@ -135,6 +135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreParticle: {fileID: 1384332805456602, guid: 95bbb991c500f4b4598b492b5dc84fc7,
     type: 2}
+  explodeParticle: {fileID: 1103109670504174, guid: 810915de439016e46beae9017ce957b5,
+    type: 2}
+  explodeObjName: RedExplodeParticle
 --- !u!212 &212092408821139384
 SpriteRenderer:
   m_ObjectHideFlags: 1

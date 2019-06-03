@@ -42,7 +42,6 @@ public class ScoreAndUI : MonoBehaviour {
         }
         highScoreText.text = "HighScore: " + highScore.ToString();
 		GameOverPanel.SetActive (true);
-		Time.timeScale = 0;
 	}
 
 	public void PlayAgain(){

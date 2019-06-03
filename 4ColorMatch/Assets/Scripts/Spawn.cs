@@ -8,19 +8,24 @@ public class Spawn : MonoBehaviour {
 	float newTime;
 	[SerializeField]float spawnTime;
 	[SerializeField]float minSpawnTime;
+	bool isRunning;
 	// Use this for initialization
 	void Start () {
+		isRunning = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//Spawn ball at certain interval while the interval between the spawning decreases slowly to minSpawnTime
-		if ((Time.time - newTime) > spawnTime) {
+		if ((Time.time - newTime) > spawnTime && isRunning) {
 			Instantiate (ballObj [Random.Range(0, ballObj.Length)], spawnPos [Random.Range(0, spawnPos.Length)].position, Quaternion.identity);
 			if (spawnTime > minSpawnTime) {
 				spawnTime -= 0.1f;
 			}
 			newTime = Time.time;
 		}
+	}
+	public void StopGame(){
+		isRunning = false;
 	}
 }
