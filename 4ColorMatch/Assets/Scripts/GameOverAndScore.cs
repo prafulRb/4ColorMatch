@@ -25,6 +25,7 @@ public class GameOverAndScore : MonoBehaviour {
 			Instantiate (scoreParticle, particlePos, Quaternion.identity);
 			Destroy (this.gameObject);
 
+
 		} else {
 			//GameOver
 			Debug.Log("GameOver");
@@ -32,7 +33,6 @@ public class GameOverAndScore : MonoBehaviour {
 			GameObject.Find ("GameManager").GetComponent<ScoreAndUI> ().GameOver ();
 			GameObject.Find ("GameManager").GetComponent<Spawn> ().StopGame ();
 			GameObject.Find("SoundEffect").GetComponent<Sound>().PlayDieSound();
-
 			explodeParticle = GameObject.Find(explodeObjName);
 			explodeParticle.transform.position = particlePos;
 			explodeParticle.GetComponent<ParticleSystem> ().Play ();

@@ -23,7 +23,6 @@ public class GameController : MonoBehaviour {
 			if (hit.collider != null) {
 				if(hit.collider.tag == "Red" || hit.collider.tag == "Green" || hit.collider.tag == "Blue" || hit.collider.tag == "Yellow"){
 
-					Debug.Log("Working");
 					if (hit.collider.gameObject.transform.parent.name == "Rectangle1") {
 						objNum = 0;
 					}else if (hit.collider.gameObject.transform.parent.name == "Rectangle2") {

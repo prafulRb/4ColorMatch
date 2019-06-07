@@ -11,7 +11,7 @@ public class Spawn : MonoBehaviour {
 	bool isRunning;
 	// Use this for initialization
 	void Start () {
-		isRunning = true;
+		isRunning = false;
 	}
 	
 	// Update is called once per frame
@@ -27,5 +27,10 @@ public class Spawn : MonoBehaviour {
 	}
 	public void StopGame(){
 		isRunning = false;
+	}
+	public void StartGame(){
+		isRunning = true;
+		newTime = Time.time;
+		spawnTime = 3;
 	}
 }

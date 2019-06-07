@@ -10,6 +10,8 @@ public class ScoreAndUI : MonoBehaviour {
 	[SerializeField]Text scoreText;
 	[SerializeField]Text highScoreText;
 	[SerializeField]GameObject GameOverPanel;
+	Animator uiAnim;
+	Spawn spawnScript;
     // Use this for initialization
     private void Awake()
     {
@@ -22,6 +24,8 @@ public class ScoreAndUI : MonoBehaviour {
     void Start () {
 		Time.timeScale = 1;
         highScore = PlayerPrefs.GetInt("HighScore");
+		uiAnim = GameObject.Find ("Canvas").GetComponent<Animator> ();
+		spawnScript = GameObject.Find ("GameManager").GetComponent<Spawn> ();
 
     }
 	
@@ -41,10 +45,20 @@ public class ScoreAndUI : MonoBehaviour {
             PlayerPrefs.SetInt("HighScore", highScore);
         }
         highScoreText.text = "HighScore: " + highScore.ToString();
-		GameOverPanel.SetActive (true);
+		uiAnim.SetTrigger("gameover");
+		spawnScript.StopGame ();
 	}
 
+	//When Player Press Play Button
+	public void Play(){
+		uiAnim.SetTrigger("play");
+		spawnScript.StartGame ();
+	}
+	//When Player Press PlayAgain Button at Gameover Scene
 	public void PlayAgain(){
-		SceneManager.LoadScene ("MainGame");
+		uiAnim.SetTrigger ("playagain");
+		spawnScript.StartGame ();
+		scoreNum = 0;
+		scoreText.text = scoreNum.ToString ();
 	}
 }
